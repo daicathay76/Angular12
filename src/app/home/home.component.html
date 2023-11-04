@@ -17,10 +17,11 @@
     </tr>
     <tr *ngFor="let trai of traicay2; let i = index">
         <td>{{i+1}}</td>
-        <td>{{trai.ten}}</td>
-        <td class="right"> <span [ngClass]="{'soam': trai.gia <0}">{{trai.gia}}</span></td>
+        <td>{{trai.ten | uppercase}}</td>
+        <td class="right"> <span [ngClass]="{'soam': trai.gia <0}">{{trai.gia |  currency:'USD':'symbol': "1.4"}}</span></td>
         <td class="middle">
-            <span *ngIf="trai.hagia">Đang hạ giá</span>
+            <span color:blue>{{trai.hagia | onSales | uppercase}}</span> 
+            <!-- chuyển việc kiểm tra dữ liệu hạ giá có true hay không cho pipe onSales -->
         </td>
     </tr>
 

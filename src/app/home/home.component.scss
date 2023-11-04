@@ -1,13 +1,13 @@
 .test {
     border: 1px solid;
     padding: 10px;
-    box-shadow: 5px 10px red;
+    box-shadow: 5px 10px blueviolet;
     width: 400px;
 }
 .formattable{
     border-collapse: collapse;  
     font-family: Arial, Helvetica, sans-serif;
-    width: 100%;      
+    // width: 100%;      
     th, td {
                     border: 1px solid #ddd;
                     padding: 8px;// canh 4 khung bằng nhau, có lệnh padding 8px 15px 20px 25px tương ứng: trên phải dưới trái
