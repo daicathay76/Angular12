@@ -10,4 +10,9 @@ export class HomeComponent {
   public age: number = 25;
   constructor() { }
   ngOnInit(): void { }
+
+  public resetname(): void {
+    console.log('đã click resetname');
+    this.name = ''
+  }
 }
