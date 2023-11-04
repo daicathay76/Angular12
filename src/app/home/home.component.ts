@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  public name: string = 'Hưng'
+  public name: string = 'Hưng Nguyễn'
   constructor() { }
   ngOnInit(): void { }
 }
