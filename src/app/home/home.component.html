@@ -1,28 +1,25 @@
 <div class="test">
     <h3>Đây là component Home</h3>
     <p>Chào bạn {{name}}</p>
-    <h1>Trái cây</h1>
-    <!-- <div *ngFor="let trai of traicay; let i = index">
-        <li>{{i+1}}. {{trai}}</li>
-    </div> -->
-</div>
+  
+
 <br>
+Tỉnh thành:
+<br>
+<label >Chọn Tỉnh thành: </label>
 
-<table class="formattable">
-    <tr>
-        <th>STT</th>
-        <th>Tên</th>
-        <th>Giá</th>
-        <th>Sales</th>
-    </tr>
-    <tr *ngFor="let trai of traicay2; let i = index">
-        <td>{{i+1}}</td>
-        <td>{{trai.ten | uppercase}}</td>
-        <td class="right"> <span [ngClass]="{'soam': trai.gia <0}">{{trai.gia |  currency:'USD':'symbol': "1.4"}}</span></td>
-        <td class="middle">
-            <span color:blue>{{trai.hagia | onSales | uppercase}}</span> 
-            <!-- chuyển việc kiểm tra dữ liệu hạ giá có true hay không cho pipe onSales -->
-        </td>
-    </tr>
-
-</table>
+<select id="city" (change)="changecity($event)">
+  <option *ngFor=" let data of vietnamdata" value={{data.city}}>
+{{data.city}}
+  </option>
+  
+</select>
+<br>
+Quận huyện:
+<br>
+<label >Chọn Quận huyện: </label>
+<select id="district">
+  <option *ngFor=" let district of district" value={{district}}>
+    {{district}}
+  </select>
+</div>
