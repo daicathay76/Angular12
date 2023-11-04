@@ -4,17 +4,25 @@
     box-shadow: 5px 10px red;
     width: 400px;
 }
+.formattable{
+    border-collapse: collapse;  
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;      
+    th, td {
+                    border: 1px solid #ddd;
+                    padding: 8px;// canh 4 khung bằng nhau, có lệnh padding 8px 15px 20px 25px tương ứng: trên phải dưới trái
+            }
+            th {
+                padding-top: 12px; // canh trên
+                padding-bottom: 12px;// canh dưới
+                text-align: center;
+                background-color: #04AA6D;
+                color: white;
+              }
+              tr:nth-child(even){background-color: #f2f2f2;}// màu cách dòng, phải để trước hover
+              tr:hover {background-color: #ddd;}// màu di chuyển chuột
+              
 
-.table,
-td,
-th {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-
-td,
-th {
-    min-width: 100px;
 }
 
 .soam {
