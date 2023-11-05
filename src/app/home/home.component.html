@@ -1,25 +1,22 @@
 <div class="test">
-    <h3>Đây là component Home</h3>
-    <p>Chào bạn {{name}}</p>
-  
+  <h3>Đây là component Home</h3>
+  <br>
+  Tỉnh thành:
+  <br>
+  <!-- 3. (change)="changecity($event): câu này khi có sự kiện thay đổi thì gọi Funtion changcity  -->
+  <select id="chọn tỉnh thành" (change)="changecity($event)">
+    <!-- Tạo biến dulieu (TH này là object) lấy từ object vietnamdata, lấy cột city -->
+    <option *ngFor=" let dulieutinh of vietnamdata" value={{dulieutinh.city}}>
+      {{dulieutinh.city}}
+    </option>
 
-<br>
-Tỉnh thành:
-<br>
-<label >Chọn Tỉnh thành: </label>
-
-<select id="city" (change)="changecity($event)">
-  <option *ngFor=" let data of vietnamdata" value={{data.city}}>
-{{data.city}}
-  </option>
-  
-</select>
-<br>
-Quận huyện:
-<br>
-<label >Chọn Quận huyện: </label>
-<select id="district">
-  <option *ngFor=" let district of district" value={{district}}>
-    {{district}}
+  </select>
+  <br>
+  <br>
+  Quận huyện:
+  <br>
+  <select id="chọn quận huyện">
+    <option *ngFor=" let district of district" value={{district}}>
+      {{district}}
   </select>
 </div>
